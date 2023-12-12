@@ -1,3 +1,11 @@
+<?php  include_once "backend/init.php";?>
+
+<?php
+if(isset($_SESSION['logged_in']) && isset($_SESSION['message']) && $_SESSION['logged_in'] === true) {
+    echo '<script defer> alert("' . $_SESSION['message'] . '")</script>';
+    unset($_SESSION['message']);
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,23 +13,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HOME PAGE</title>
-    <header>
-        <!-- HEADER LOGO-->
-        <div class="logo">
-            <h3><i class="fa-solid fa-headphones"></i> ROBE HEADPHONES AND ACCESORIES</h3> 
-        </div>
-        
-        <!--HEADER NAVIGATION  LINKS-->
-        <li>
-            <ul><a href="#">HOME</a></ul>
-            <ul><a href="#">ABOUT</a></ul>
-            <ul><a href="#">CONTACT</a></ul>
-        </li>
-            </header>
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet " href="CSS/home.css">
-</head>
+
 <body>
+<header>
+    <!-- HEADER LOGO-->
+    <div class="logo">
+        <h3><i class="fa-solid fa-headphones"></i> ROBE HEADPHONES AND ACCESORIES</h3>
+    </div>
+
+    <!--HEADER NAVIGATION  LINKS-->
+    <li>
+        <ul><a href="./">HOME</a></ul>
+        <ul><a href="#">ABOUT</a></ul>
+        <ul><a href="#">CONTACT</a></ul>
+
+       <?php
+       if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
+            echo "<ul>Welcome, " . $_SESSION['name'] . "</ul>";
+            echo "<ul><a href='backend/logout.php'>LOGOUT</a></ul>";
+       } else {
+            echo "<ul><a href='signup.php'>SIGNUP</a></ul>";
+       }
+       ?>
+
+
+    </li>
+</header>
     <!-- A CONTAINER FOR THE WELCOME MESSAGE-->
     <div class="welcome">
         <h1>WELCOME TO ROBE HEADPHONES AND ACCESORIES</h1>
@@ -45,7 +64,7 @@
     </div>
 
     <div class="explore">
-        <a href="product.html">EXPLORE NOW</a>
+        <a href="product.php">EXPLORE NOW</a>
     </div>
 
     <footer>
@@ -59,10 +78,5 @@
         </ul>
     </footer>
 
-    
-
-
-   
-    
 </body>
 </html>

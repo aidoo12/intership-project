@@ -1,3 +1,7 @@
+<?php
+include_once "backend/init.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,12 +29,15 @@
     </li>
 </header>
    <div class="form">
-    <h2>Sign in</h2>
+       <?php
+       if(isset($_SESSION['message'])) {
+           echo '<p class="text-danger text-center user-exists">' . $_SESSION['message'] . '</p>';
+           unset($_SESSION['message']);
+       }
+       ?>
+    <h2>Sign In</h2>
     <p>Stay updated on your professional world</p>
-    <form>
-        <!--INPUT TYPE FOR NAME-->
-        <input type="text" name="name" id="name" placeholder="  Enter full-name" required="required" class="field">
-
+    <form action="backend/login.php" method="POST">
         <!-- INPUT TYPE FOR EMIAL-->
         <input type="email " name="email" id="email" placeholder="  Email or Phone" required="required" class="field">
 
@@ -40,12 +47,12 @@
         <a href="#" class="forget-password">forget password?</a> <br><br>
 
         <div class="sign-in-container">
-            <button class="sign-in" type="button" onclick="validateForm()"><a href="#">Sign in</a></button>
+            <button name="sign_in" class="sign-in" type="submit" onclick="validateForm()">Sign In</button>
         </div>
 
         
         <p>
-            by clicking continue,you agree to likedin's<span class="user-aggrement">User Aggrement</span>,<span class="user-aggrement">Privacy Policy</span> and<span class="user-aggrement">Cookie policy</span> .
+            by clicking continue,you agree to likedIn's<span class="user-aggrement">User Aggrement</span>,<span class="user-aggrement">Privacy Policy</span> and<span class="user-aggrement">Cookie policy</span> .
         </p>
 
         <!-- NAVIGATION LINKS TO SIGN IN  WITH GOOGLE, APPLE OR WITH A ONE-TIME LINK  -->
