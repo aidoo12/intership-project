@@ -1,3 +1,5 @@
+<?php  include_once "backend/init.php";?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,29 +7,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PRODUCT PAGE</title>
-    <header>
-        <!-- HEADER LOGO-->
-        <div class="logo">
-            <h3><i class="fa-solid fa-headphones" style="color: #000000;"></i> ROBE HEADPHONES AND ACCESORIES</h3> 
-        </div>
-        
-        <!--HEADER NAVIGATION  LINKS-->
-        <li>
-            <ul><a href="index.html">HOME</a></ul>
-            <ul><a href="#">ABOUT</a></ul>
-            <ul><a href="#">CONTACT</a></ul>
-        </li>
-            </header>
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
             <link rel="stylesheet" href="CSS/products.css">
 </head>
 <body>
+<header>
+    <!-- HEADER LOGO-->
+    <div class="logo">
+        <h3><i class="fa-solid fa-headphones"></i> ROBE HEADPHONES AND ACCESORIES</h3>
+    </div>
+
+    <!--HEADER NAVIGATION  LINKS-->
+    <li>
+        <ul><a href="./">HOME</a></ul>
+        <ul><a href="#">ABOUT</a></ul>
+        <ul><a href="#">CONTACT</a></ul>
+
+        <?php
+        if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
+            echo "<ul>Welcome, " . $_SESSION['name'] . "</ul>";
+            echo "<ul><a href='backend/logout.php'>LOGOUT</a></ul>";
+        } else {
+            echo "<ul><a href='signup.php'>SIGNUP</a></ul>";
+        }
+        ?>
+
+
+    </li>
+</header>
 <!-- CONTAINER FOR WELCOME NOTE AND LOGIN PAGE-->
     <div class="content-cover">
         <h1>WELCOME TO ROBE HEADPHONES AND ACCESORIES</h1>
         <div class="login-signup">
-            <a href="login.php">LOGIN</a>
-            <a href="signup.php">SIGN UP</a>
+            <?php
+                if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
+                    echo "<a style='margin-left:-125px' href='backend/logout.php'>LOGOUT</a>";
+                } else {
+                    echo "<a href='login.php'>LOGIN</a>";
+                    echo "<a href='signup.php'>SIGN UP</a>";
+                }
+            ?>
+            <!--<a href="login.php">LOGIN</a>
+            <a href="signup.php">SIGN UP</a>-->
 
         </div>
         
