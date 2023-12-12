@@ -51,7 +51,7 @@
         <a href="#" class="forget-password">forget password?</a> <br><br>
 
         <div class="sign-in-container">
-            <button name="sign_up" class="sign-in" type="submit" onclick="validateForm()"><a href="#">Sign Up</a></button>
+            <button name="sign_up" class="sign-in" type="submit" onclick="validateForm()">Sign Up</button>
         </div>
 
         <p>
