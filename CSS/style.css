@@ -220,3 +220,12 @@ footer li a{
     text-decoration: underline;
     opacity: 0.8;
 }
+
+.text-danger {
+    color: red;
+}
+
+.user-exists {
+    font-size: 18px;
+    margin: 0;
+}

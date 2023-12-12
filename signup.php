@@ -1,3 +1,7 @@
+<?php
+    include_once "backend/init.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,8 +11,9 @@
     <title>A SIMPLE LOGIN PAGE</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet " href="CSS/style.css">
-    <link rel="stylesheet" href="form.js">
+    <link rel="stylesheet " href="CSS/style.css?v=1">
+    <!--<link rel="stylesheet" href="form.js">-->
+    <script src="form.js"></script>
 </head>
 <body>
 <header>
@@ -25,9 +30,15 @@
     </li>
 </header>
    <div class="form">
+       <?php
+            if(isset($_SESSION['user_exists_message'])) {
+           echo '<p class="text-danger text-center user-exists">' . $_SESSION['user_exists_message'] . '</p>';
+           unset($_SESSION['user_exists_message']);
+       }
+       ?>
     <h2>Sign Up</h2>
     <p>Stay updated on your professional world</p>
-    <form>
+    <form action="backend/registration.php" method="POST">
         <!--INPUT TYPE FOR NAME-->
         <input type="text" name="name" id="name" placeholder="  Enter full-name" required="required" class="field">
 
@@ -40,11 +51,11 @@
         <a href="#" class="forget-password">forget password?</a> <br><br>
 
         <div class="sign-in-container">
-            <button class="sign-in" type="button" onclick="validateForm"><a href="#">Sign Up</a></button>
+            <button name="sign_up" class="sign-in" type="submit" onclick="validateForm()"><a href="#">Sign Up</a></button>
         </div>
 
         <p>
-            by clicking continue,you agree to likedin's<span class="user-aggrement">User Aggrement</span>,<span class="user-aggrement">Privacy Policy</span> and<span class="user-aggrement">Cookie policy</span> .
+            by clicking continue,you agree to likedIn's<span class="user-aggrement">User Aggrement</span>,<span class="user-aggrement">Privacy Policy</span> and<span class="user-aggrement">Cookie policy</span> .
         </p>
 
         <!-- NAVIGATION LINKS TO SIGN IN  WITH GOOGLE, APPLE OR WITH A ONE-TIME LINK  -->
