@@ -1,0 +1,195 @@
+
+/* STYLING OF THE LOGIN PAGE  */
+
+*{
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.logo{
+    height: 80px;
+    font-size: 24px;
+    margin-left: 30px ;
+    color:black ;
+    margin-top: 21px;
+    
+}
+
+body{
+    margin-top: 110px;
+    background: url(/IMAGES/background.jpg);
+    background-attachment: scroll;
+    background-position: center;
+    background-size: cover;
+    
+
+}
+
+header{
+background-color: whitesmoke;
+height: 80px;
+position: absolute ;
+top:0px;
+right:0px;
+left: 0px;
+display: flex;
+}
+
+header *{
+    display: inline;
+}
+
+header li{
+    margin: 30px;
+}
+
+header li a{
+    color: black;
+    text-decoration: none;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    margin-left: 35px;
+    margin-top: 10px;
+    transition: 0.6s ease-in-out;
+}
+
+header li a:hover{
+    background-color: black;
+    color: white;
+}
+
+
+
+.form {
+    border: 1px solid grey; 
+    background-color: white; 
+    width: 360px;
+    margin-bottom: 30px;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    margin-left: 40%;
+}
+
+.form *{
+    margin-left: 20px;
+    
+}
+
+.field{
+    width: 250px;
+    height: 40px;
+    margin:10px
+}
+
+.forget-password{
+    text-decoration: none;
+    color: blue;
+}
+.sign-in{
+    width: 270px;
+    border: 1px solid black;
+    border-radius: 20px;
+    text-align: center;
+    margin-left: 28px;
+    padding: 15px;
+    background-color:white;
+    transition: 0.5s ease-in-out;
+}
+
+.sign-in:hover{
+    background-color: blue;
+    
+}
+
+.sign-in a:hover{
+    color: white;
+}
+
+.sign-in a{
+    color: black;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.signin-links{
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 15px;
+    margin-bottom: 15px;
+    text-align:left ;
+    width: 250px;
+    transition: 0.5s ease-in-out;
+}
+.signin-links:hover{
+    background-color: blue;
+   
+}
+
+.signin-links a:hover{
+     color: white; 
+}
+
+
+.signin-links a{
+    text-decoration: none;
+    color: black;
+    
+}
+
+.user-aggrement {
+    color: blue;
+}
+
+.new{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 70px;
+    color: white;
+    color: black;
+    font-weight: bolder;
+}
+
+.new a{
+    text-decoration: none;
+    color: black;
+
+}
+
+footer{
+    display: flex;
+    height: 50px;
+    margin-top: 30px;
+    margin-left: 40px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+footer *{
+    display: inline;
+}
+
+footer li{
+    margin: 15px;
+}
+
+footer li a{
+    color:black;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+#in{
+    color:whitesmoke;
+}
+
+.linkedin{
+    color: black;
+    font-weight: bolder;
+}
+
+    

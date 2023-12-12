@@ -1,0 +1,139 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.logo{
+    height: 80px;
+    font-size: 24px;
+    margin-left: 30px ;
+    color:black ;
+    margin-top: 21px;
+    
+}
+
+body{
+    margin-top: 110px;
+    background: linear-gradient(to top,rgba(0,0,0,0.5)50%, rgba(0,0,0,0.5)50%), url(/IMAGES/homebackground.jpg);
+    background-position: center;
+    background-size: cover;
+    
+
+}
+
+header{
+background-color: whitesmoke;
+height: 80px;
+position: absolute ;
+top:0px;
+right:0px;
+left: 0px;
+display: flex;
+}
+
+header *{
+    display: inline;
+}
+
+header li{
+    margin: 30px;
+}
+
+header li a{
+    color: black;
+    text-decoration: none;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    margin-left: 35px;
+    margin-top: 30px;
+    transition: 0.6s ease-in-out;
+}
+
+
+
+header li a:hover{
+    background-color: black;
+    color: white;
+}
+
+.welcome{
+    color: whitesmoke;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.new-arrivals{
+    font-size: 70px;
+    line-height: 60px;
+}
+
+.main-content{
+    color: whitesmoke;
+    margin-left: 40px;
+    line-height: 25px;
+}
+
+.sub-content{
+    color: whitesmoke;
+    margin-left: 40px;
+    line-height: 25px;
+    margin-bottom: 30px;
+}
+
+.explore{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 60px;
+    
+}
+
+.explore a{
+    color: whitesmoke;
+    border: 1px solid grey;
+    border-radius: 20px;
+    text-decoration: none;
+    padding: 20px;
+    transition: 0.6s ease-in-out;
+}
+
+.explore a:hover{
+    background-color:whitesmoke;
+    color: blue;
+}
+
+footer{
+    color: whitesmoke;
+    margin-left: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+footer *{
+    display: inline;
+}
+
+footer li{
+    margin: 30px;
+}
+
+footer li a{
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+.fa-brands{
+    font-size: 30px;
+    color: whitesmoke;
+    transition: 0.6s ease-in-out;
+}
+
+.fa-brands:hover{
+    color: blue;
+}
