@@ -54,45 +54,58 @@ header li a{
     transition: 0.6s ease-in-out;
 }
 
+.form {
+    border: 1px solid grey;
+    background-color: white;
+    width: 360px;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    /*margin-left: 40%;*/
+    margin: 0 auto 30px;
+    padding: 20px;
+}
+
+
+
 header li a:hover{
     background-color: black;
     color: white;
 }
 
-
-
-.form {
-    border: 1px solid grey; 
-    background-color: white; 
-    width: 360px;
-    margin-bottom: 30px;
-    justify-content: center;
-    align-items: center;
-    text-align: left;
-    margin-left: 40%;
-}
-
 .form *{
-    margin-left: 20px;
+    /*margin-left: 20px;*/
     
 }
 
 .field{
-    width: 250px;
+    /*width: 250px;*/
+    width: 100%;
     height: 40px;
-    margin:10px
+    /*margin:10px*/
+    margin-block: 10px;
+    padding: 10px;
+}
+
+.field::placeholder{
+    color: grey;
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .forget-password{
     text-decoration: none;
     color: blue;
 }
+.sign-in-container {
+    text-align: center;
+}
 .sign-in{
     width: 270px;
     border: 1px solid black;
     border-radius: 20px;
     text-align: center;
-    margin-left: 28px;
+    /*margin-left: 28px;*/
     padding: 15px;
     background-color:white;
     transition: 0.5s ease-in-out;
@@ -120,7 +133,8 @@ header li a:hover{
     padding: 15px;
     margin-bottom: 15px;
     text-align:left ;
-    width: 250px;
+    /*width: 250px;*/
+    width: 100%;
     transition: 0.5s ease-in-out;
 }
 .signin-links:hover{
@@ -192,4 +206,17 @@ footer li a{
     font-weight: bolder;
 }
 
-    
+.text-center {
+    text-align: center;
+}
+
+.sign-up-link {
+    color: lightseagreen;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.sign-up-link:hover {
+    text-decoration: underline;
+    opacity: 0.8;
+}
